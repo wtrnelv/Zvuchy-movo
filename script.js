@@ -14,10 +14,10 @@ const phraseology = [
 
 // ─── MASCOT CONFIG ───────────────────────────────────
 const MASCOTS = {
-  hello:   "photo/приві.png",
-  correct: "photo/тестфулл.png",
-  wrong:   "photo/неправильно.png",
-  finish:  "photo/тестфулл.png"
+  hello:   "приві.png",
+  correct: "тестфулл.png",
+  wrong:   "неправильно.png",
+  finish:  "тестфулл.png"
 };
 
 // ─── STATE ───────────────────────────────────────────
