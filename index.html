@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Звучи — Вивчай рідну мову</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" data-page="home">
+        <span class="logo-icon">🌻</span>
+        <span class="logo-text">ЗВУЧИ</span>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-btn active" data-page="home">Головна</button>
+        <div class="nav-dropdown">
+          <button class="nav-btn has-dropdown">Теми ▾</button>
+          <div class="dropdown-menu">
+            <button class="dropdown-item" data-topic="phraseology">
+              <span class="di-icon">💬</span>
+              <span class="di-text"><strong>Фразеологізми</strong><small>Крилаті вирази і їх значення</small></span>
+            </button>
+            <button class="dropdown-item coming-soon" disabled>
+              <span class="di-icon">📖</span>
+              <span class="di-text"><strong>Правила мови</strong><small>Незабаром…</small></span>
+            </button>
+            <button class="dropdown-item coming-soon" disabled>
+              <span class="di-icon">🔤</span>
+              <span class="di-text"><strong>Слова-паразити</strong><small>Незабаром…</small></span>
+            </button>
+          </div>
+        </div>
+        <button class="nav-btn" data-page="about">Про автора</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="appRoot">
+
+    <!-- ── HOME ── -->
+    <div id="page-home" class="page active">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-eyebrow">Твоя рідна мова — твій скарб</div>
+          <h1 class="hero-title">Вивчай<br><em>українську</em><br>із задоволенням</h1>
+          <p class="hero-sub">Інтерактивні картки, тести та цікаві теми — усе в одному місці</p>
+          <div class="hero-actions">
+            <button class="btn-primary" data-topic="phraseology">Почати вивчення</button>
+            <button class="btn-outline" data-page="about">Про проєкт</button>
+          </div>
+        </div>
+        <div class="hero-deco" aria-hidden="true">
+          <div class="deco-blob b1"></div>
+          <div class="deco-blob b2"></div>
+          <div class="deco-dots"></div>
+        </div>
+      </section>
+
+      <section class="home-topics">
+        <div class="container">
+          <h2 class="block-title">Доступні теми</h2>
+          <p class="block-sub">Оберіть тему, щоб розпочати</p>
+          <div class="topics-grid">
+            <div class="topic-card active-topic" data-topic="phraseology">
+              <div class="tc-icon">💬</div>
+              <h3>Фразеологізми</h3>
+              <p>Крилаті вирази, ідіоми та їхні значення. Флеш-картки + тести.</p>
+              <span class="tc-badge available">Доступно</span>
+            </div>
+            <div class="topic-card locked">
+              <div class="tc-icon">📖</div>
+              <h3>Правила мови</h3>
+              <p>Граматика, орфографія та пунктуація у зручному форматі.</p>
+              <span class="tc-badge soon">Незабаром</span>
+            </div>
+            <div class="topic-card locked">
+              <div class="tc-icon">🔤</div>
+              <h3>Слова-паразити</h3>
+              <p>Що замінити? Як казати правильно? Відповіді тут.</p>
+              <span class="tc-badge soon">Незабаром</span>
+            </div>
+            <div class="topic-card locked">
+              <div class="tc-icon">🏛️</div>
+              <h3>Архаїзми</h3>
+              <p>Слова, що вийшли з ужитку, але варті уваги.</p>
+              <span class="tc-badge soon">Незабаром</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-stats">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item"><span class="stat-num">9+</span><span class="stat-label">Фразеологізмів</span></div>
+            <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Режими навчання</span></div>
+            <div class="stat-item"><span class="stat-num">∞</span><span class="stat-label">Бажання вчитись</span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── TOPIC: PHRASEOLOGY ── -->
+    <div id="page-phraseology" class="page">
+      <div class="topic-hero">
+        <div class="container">
+          <button class="back-btn" data-page="home">← Назад</button>
+          <div class="topic-hero-content">
+            <span class="topic-hero-icon">💬</span>
+            <div>
+              <h1 class="topic-hero-title">Фразеологізми</h1>
+              <p class="topic-hero-desc">Крилаті вирази та ідіоми української мови</p>
+            </div>
+          </div>
+          <div class="topic-tabs">
+            <button class="tab-btn active" data-tab="learn">🃏 Вивчення</button>
+            <button class="tab-btn" data-tab="quiz">📝 Тестування</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container topic-body">
+
+        <!-- LEARN TAB -->
+        <div id="tab-learn" class="tab-content active">
+          <div class="section-header">
+            <p class="section-desc">Натисни на картку, щоб побачити значення</p>
+          </div>
+          <div class="cards-grid" id="cardsGrid"></div>
+        </div>
+
+        <!-- QUIZ TAB -->
+        <div id="tab-quiz" class="tab-content">
+
+          <!-- SETUP SCREEN -->
+          <div id="quizSetup" class="quiz-setup">
+            <div class="setup-card">
+              <div class="setup-icon">📝</div>
+              <h3 class="setup-title">Скільки питань?</h3>
+              <p class="setup-desc">Обери кількість питань для цього тесту</p>
+              <div class="count-grid">
+                <button class="count-btn" data-count="3">3</button>
+                <button class="count-btn active" data-count="5">5</button>
+                <button class="count-btn" data-count="7">7</button>
+                <button class="count-btn" data-count="10">10</button>
+                <button class="count-btn count-btn-all" data-count="all">Усі</button>
+              </div>
+              <button class="btn-primary" id="startQuizBtn">Розпочати тест 🚀</button>
+            </div>
+          </div>
+
+          <!-- MAIN QUIZ -->
+          <div id="quizMain" class="hidden">
+            <div class="quiz-wrapper">
+              <div class="quiz-progress-bar">
+                <div class="quiz-progress-fill" id="quizProgressFill"></div>
+              </div>
+              <div class="quiz-stats">
+                <span id="quizCounter">Питання 1 / 5</span>
+                <span id="quizScore">✅ 0 &nbsp; ❌ 0</span>
+              </div>
+              <div class="quiz-card" id="quizCard">
+                <div class="quiz-phrase" id="quizPhrase"></div>
+                <div class="quiz-options" id="quizOptions"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RESULT -->
+          <div class="quiz-result hidden" id="quizResult">
+            <div class="result-icon" id="resultIcon"></div>
+            <h3 id="resultTitle"></h3>
+            <p id="resultText"></p>
+            <button class="btn-primary" id="restartBtn">Спробувати знову</button>
+          </div>
+
+        </div><!-- /tab-quiz -->
+      </div>
+    </div>
+
+    <!-- ── ABOUT ── -->
+    <div id="page-about" class="page">
+      <div class="about-hero">
+        <div class="container">
+          <button class="back-btn" data-page="home">← Назад</button>
+          <h1 class="about-title">Про автора</h1>
+        </div>
+      </div>
+      <div class="container about-body">
+        <div class="about-card">
+          <div class="about-avatar">👩‍💻</div>
+          <div class="about-info">
+            <h2 class="about-name">Розробник проєкту</h2>
+            <p class="about-role">Бессараб Олександра Сергіївна</p>
+          </div>
+        </div>
+        <div class="about-section">
+          <h3>Про проєкт</h3>
+          <p>«Звучи» — це інтерактивний застосунок для вивчення рідної мови. Тут зібрані фразеологізми, ідіоми та інші цікаві мовні явища у форматі, що робить навчання приємним та ефективним.</p>
+        </div>
+        <div class="about-section">
+          <h3>Мета</h3>
+          <p>Зробити вивчення української мови доступним, сучасним і захопливим для всіх — від школярів до дорослих, які хочуть краще знати рідну мову.</p>
+        </div>
+        <div class="about-section">
+          <h3>Технології</h3>
+          <div class="tech-tags">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Google Fonts</span>
+            <span class="tech-tag">CSS Animations</span>
+            <span class="tech-tag">Gemini</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">Cloud</span>
+          </div>
+          </div>
+        </div>
+        <div class="about-contact">
+          <p>Маєш ідеї або хочеш додати свій матеріал?</p>
+          <a href="mailto:author@example.com" class="btn-primary">Написати нам</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== MASCOT ===== -->
+  <div class="mascot-wrap" id="mascotWrap">
+    <div class="mascot-bubble" id="mascotBubble">
+      <span id="mascotText">Привіт!</span>
+    </div>
+    <img src="mascot-hello.gif" alt="Маскот" class="mascot-img" id="mascotImg" />
+    <div class="mascot-fallback" id="mascotFallback">🦊</div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <p>Зроблено з ❤️ для любителів рідної мови &nbsp;·&nbsp; Звучи 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
